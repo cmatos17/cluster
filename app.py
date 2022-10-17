@@ -16,7 +16,7 @@ gh()
 
 
 
-st.title("Braskem - PDF Table Extractor")
+st.title("Braskem - OCR Extractor for PDF components")
 st.subheader("with `Camelot` Python library")
 
 st.image("https://raw.githubusercontent.com/camelot-dev/camelot/master/docs/_static/camelot.png", width=200)
