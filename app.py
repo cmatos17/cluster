@@ -45,7 +45,7 @@ if input_pdf is not None:
     st.markdown("### Number of Tables")
 
     # display the output after parsing 
-    st.write(table)
+    #st.write(table)
 
     # display the table
     st.markdown("Se nao nulo")
@@ -59,7 +59,7 @@ if input_pdf is not None:
 
         # display the dataframe
         
-        st.dataframe(table[int(option)-1].df)
+        st.dataframe(table[int(option)].df)
         
     
         
