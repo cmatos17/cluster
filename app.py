@@ -68,7 +68,7 @@ if input_pdf is not None:
         
         csv_file = convert_df(table[int(option)].df)
         st.download_button(
-            label="Download dataframe",
+            label="Download",
             data=csv_file,
             file_name='filename_downloaded.csv',
             mime='text/csv',
