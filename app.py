@@ -42,7 +42,7 @@ if input_pdf is not None:
     # read the pdf and parse it using stream
     table = cam.read_pdf("input.pdf", pages = page_number, flavor = 'stream')
 
-    st.markdown("# Number of Tables")
+    st.markdown("#### Number of Tables")
 
     # display the output after parsing 
     #st.write(table)
