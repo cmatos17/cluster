@@ -40,7 +40,7 @@ if input_pdf is not None:
     f.close()
 
     # read the pdf and parse it using stream
-    table = cam.read_pdf("input.pdf", pages = page_number, flavor = 'stream')
+    table = cam.read_pdf("input.pdf", pages = page_number, flavor = '')
 
     st.markdown("### Number of Tables")
 
@@ -60,6 +60,18 @@ if input_pdf is not None:
         # display the dataframe
         
         st.dataframe(table[int(option)].df)
+        
+        @st.cache
+        def convert_df(df):
+        # IMPORTANT: Cache the conversion to prevent computation on every rerun    
+            return df.to_csv().encode('utf-8')
+        csv_file = convert_df(dataframe_name)
+        st.download_button(
+            label="Download dataframe",
+            data=csv_file,
+            file_name='filename_downloaded.csv',
+            mime='text/csv',
+        )
         
     
         
