@@ -40,7 +40,7 @@ if input_pdf is not None:
     f.close()
 
     # read the pdf and parse it using stream
-    table = cam.read_pdf("input.pdf", pages = page_number, flavor = '')
+    table = cam.read_pdf("input.pdf", pages = page_number, flavor = 'lattice')
 
     st.markdown("### Number of Tables")
 
