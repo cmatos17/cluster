@@ -46,7 +46,7 @@ if input_pdf is not None:
 
     # display the output after parsing 
     #st.write(table)
-
+    st.write(len(table))
     # display the table
     st.markdown("Se nao nulo")
     if len(table) > 0:
