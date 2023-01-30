@@ -53,7 +53,7 @@ if input_pdf is not None:
         st.markdown("Se maior q 0")
         # extract the index value of the table
         
-        option = st.selectbox(label = "Select the Table to be displayed", options = range(len(table) + 1))
+        option = st.selectbox(label = "Select the Table to be displayed", options = range(len(table)))
 
         st.markdown('### Output Table')
 
