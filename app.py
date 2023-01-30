@@ -26,7 +26,7 @@ st.title("Braskem - OCR  Table Extractor for PDF")
 
 input_pdf = st.file_uploader(label = "upload your pdf here", type = 'pdf')
 
-st.markdown("### Page Number")
+st.markdown("## Page Number")
 
 page_number = st.text_input("Enter the page # from where you want to extract the PDF eg: 3", value = 1)
 
@@ -42,7 +42,7 @@ if input_pdf is not None:
     # read the pdf and parse it using stream
     table = cam.read_pdf("input.pdf", pages = page_number, flavor = 'stream')
 
-    st.markdown("### Number of Tables")
+    st.markdown("# Number of Tables")
 
     # display the output after parsing 
     #st.write(table)
