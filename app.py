@@ -61,12 +61,4 @@ if input_pdf is not None:
         
         st.dataframe(table[int(option)-1].df)
         
-    # DATAFRAME TRANSFORMED TO CSV@st.cachedef convert_df(df):
-    # IMPORTANT: Cache the conversion to prevent computation on every rerun    return df.to_csv().encode('utf-8')
-    csv_file = convert_df(dataframe_name)
-    st.download_button(
-        label="Download dataframe",
-        data=csv_file,
-        file_name='filename_downloaded.csv',
-        mime='text/csv',
-    )
+    
