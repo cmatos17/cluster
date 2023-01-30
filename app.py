@@ -48,9 +48,9 @@ if input_pdf is not None:
     st.write(table)
 
     # display the table
-
+    st.markdown("Se nao nulo")
     if len(table) > 0:
-
+        st.markdown("Se maior q 0")
         # extract the index value of the table
         
         option = st.selectbox(label = "Select the Table to be displayed", options = range(len(table) + 1))
@@ -61,19 +61,6 @@ if input_pdf is not None:
         
         st.dataframe(table[int(option)-1].df)
         
-    # DATAFRAME TRANSFORMED TO CSV
-    @st.cache
-
-    def convert_df(df):
-        # IMPORTANT: Cache the conversion to prevent computation on every rerun    
-        return df.to_csv().encode('utf-8')
-
-    csv_file = convert_df(st.dataframe(table[int(option)-1].df))
-    st.download_button(
-        label="Download dataframe",
-        data=csv_file,
-        file_name='filename_downloaded.csv',
-        mime='text/csv',
-    )
+    
         
 
