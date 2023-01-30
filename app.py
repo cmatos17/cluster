@@ -64,7 +64,7 @@ if input_pdf is not None:
         @st.cache
         def convert_df(df):
         # IMPORTANT: Cache the conversion to prevent computation on every rerun    
-            return df.to_csv().encode('utf-8')
+            return df.to_csv('file.csv',encoding='utf-8-sig')
         csv_file = convert_df(table[int(option)].df)
         st.download_button(
             label="Download dataframe",
