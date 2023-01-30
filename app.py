@@ -16,7 +16,7 @@ gh()
 
 
 
-st.title("Braskem - OCR Extractor for PDF components")
+st.title("Braskem - OCR  Table Extractor for PDF")
 #st.subheader("with `Camelot` Python library")
 
 #st.image("https://raw.githubusercontent.com/camelot-dev/camelot/master/docs/_static/camelot.png", width=200)
@@ -48,9 +48,9 @@ if input_pdf is not None:
     #st.write(table)
     st.write(len(table))
     # display the table
-    st.markdown("Se nao nulo")
+    #st.markdown("Se nao nulo")
     if len(table) > 0:
-        st.markdown("Se maior q 0")
+        #st.markdown("Se maior q 0")
         # extract the index value of the table
         
         option = st.selectbox(label = "Select the Table to be displayed", options = range(len(table)))
