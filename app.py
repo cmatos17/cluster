@@ -51,7 +51,7 @@ def data_scaler(scaler, var):
     df[var].plot(kind = 'hist')
 
 # Título do aplicativo
-st.title('Aplicativo de Análise de Dados')
+st.title('Aplicativo de Análise de Dadosssss')
 
 
 # Carregar o arquivo CSV
