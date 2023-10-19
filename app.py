@@ -77,7 +77,7 @@ if file is not None:
     else:
         # Loop através das colunas e permitir a conversão
         for col in selected_columns:
-            conversion_type = st.selectbox(f'Tipo desejado para {col}:', ['int', 'float', 'string'])
+            conversion_type = st.selectbox(f'Tipo desejado para {col}:', [ 'float','int', 'string'])
 
             if conversion_type == 'int':
                 converted_df[col] = df[col].str.replace(',', '.').astype(int)
